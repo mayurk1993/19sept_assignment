@@ -1,0 +1,98 @@
+{
+    "canIpForward": false,
+    "cpuPlatform": "Unknown CPU Platform",
+    "creationTimestamp": "2022-09-18T04:58:37.392-07:00",
+    "deletionProtection": false,
+    "disks": [
+      {
+        "architecture": "X86_64",
+        "autoDelete": true,
+        "boot": true,
+        "deviceName": "persistent-disk-0",
+        "diskSizeGb": "20",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "GVNIC"
+          }
+        ],
+        "index": 0,
+        "interface": "SCSI",
+        "kind": "compute#attachedDisk",
+        "licenses": [
+          "https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7"
+        ],
+        "mode": "READ_WRITE",
+        "source": "https://www.googleapis.com/compute/v1/projects/nomadic-oarlock-362811/zones/us-central1-a/disks/web",
+        "type": "PERSISTENT"
+      }
+    ],
+    "fingerprint": "HcuPrefZPHc=",
+    "id": "1177402065459788035",
+    "kind": "compute#instance",
+    "labelFingerprint": "42WmSpB8rSM=",
+    "lastStartTimestamp": "2022-09-18T04:58:43.597-07:00",
+    "lastStopTimestamp": "2022-09-18T21:31:28.185-07:00",
+    "machineType": "https://www.googleapis.com/compute/v1/projects/nomadic-oarlock-362811/zones/us-central1-a/machineTypes/n1-standard-4",
+    "metadata": {
+      "fingerprint": "jJyHPGFIZnA=",
+      "items": [
+        {
+          "key": "startup-script",
+          "value": "!/bin/bash\n\nsudo yum update httpd\nsudo yum install httpd\n\nsudo systemctl start httpd"
+        },
+        {
+          "key": "ssh-keys",
+          "value": "mk0576153:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJPGQdVYVhCxMOmRtGaRjtPCwbYgeVhoFaHY3PIcEufBD5lar4cvw5c6rAtZG9ZM+jNY+454sj/3jE8uSLfpiCU= google-ssh {\"userName\":\"mk0576153@gmail.com\",\"expireOn\":\"2022-09-18T16:25:27+0000\"}\nmk0576153:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAG/1KC+DjE+vVGAVP2KEYgavfMtbttXSF4OchDPJ6WEDtX9KyBUIICcmAvlgKHAJ4QIwUp5sqRlUuhpJ0UgYUDshFofHXRYYP116JGsfzTO2X7SjZchwEYV8OaWGRTysGX0OKdfhAVvlqbq2Za+nyBbvXpcU7rccnSXZByOvNwfVsOAHt8Ss3JYOeTXv3fTAH3egfNqGy4R5xDU7MrEEBORW+QiQ2q1XOgpJH3g6e82AxA+aWSgnQTmx3cWsWNVJAxT5VjBg1MUMkOPL2O8nxVNVj/xfnU/WvRKRLdX2FCvupdyWU9kAl76cPiiP5IxGYTdH42KQbOasAdprsQt2MFE= google-ssh {\"userName\":\"mk0576153@gmail.com\",\"expireOn\":\"2022-09-18T16:25:34+0000\"}"
+        }
+      ],
+      "kind": "compute#metadata"
+    },
+    "name": "web",
+    "networkInterfaces": [
+      {
+        "accessConfigs": [
+          {
+            "kind": "compute#accessConfig",
+            "name": "external-nat",
+            "networkTier": "PREMIUM",
+            "type": "ONE_TO_ONE_NAT"
+          }
+        ],
+        "fingerprint": "6tZE4RA003w=",
+        "kind": "compute#networkInterface",
+        "name": "nic0",
+        "network": "https://www.googleapis.com/compute/v1/projects/nomadic-oarlock-362811/global/networks/default",
+        "networkIP": "10.128.0.16",
+        "stackType": "IPV4_ONLY",
+        "subnetwork": "https://www.googleapis.com/compute/v1/projects/nomadic-oarlock-362811/regions/us-central1/subnetworks/default"
+      }
+    ],
+    "scheduling": {
+      "automaticRestart": true,
+      "onHostMaintenance": "MIGRATE",
+      "preemptible": false,
+      "provisioningModel": "STANDARD"
+    },
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/nomadic-oarlock-362811/zones/us-central1-a/instances/web",
+    "shieldedInstanceConfig": {
+      "enableIntegrityMonitoring": true,
+      "enableSecureBoot": false,
+      "enableVtpm": true
+    },
+    "shieldedInstanceIntegrityPolicy": {
+      "updateAutoLearnPolicy": true
+    },
+    "startRestricted": false,
+    "status": "TERMINATED",
+    "tags": {
+      "fingerprint": "SSlhfoW1yKg=",
+      "items": [
+        "allow-80",
+        "allow-8080"
+      ]
+    },
+    "zone": "https://www.googleapis.com/compute/v1/projects/nomadic-oarlock-362811/zones/us-central1-a"
+  }
